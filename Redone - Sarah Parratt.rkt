@@ -45,7 +45,8 @@
             (error-result)
             (list (list-ref hist (- n 1)) rest)))))
 
-;; Evaluates one prefix expression and returns (list value remaining-chars), or 'error.
+;; Recursively evaluates prefix expressions with support for history references ($n)
+;; Returns either (list value remaining-chars) or 'error
 (define (eval-expr chars history)
   (let ([chars (skip-ws chars)])
     (cond
