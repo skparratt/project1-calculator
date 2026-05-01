@@ -120,7 +120,7 @@
           (let ([result (evaluate line history)])
             (cond
               [(eq? result 'error)
-               (displayln "Error: Invalid prefix expression or history reference")
+               (displayln "Error: Invalid Expression")
                (repl history)]
               [else
                (define new-history (cons result history))
