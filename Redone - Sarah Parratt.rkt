@@ -4,6 +4,12 @@
 ;; Name: Sarah Parratt
 ;; Course: CS 4337 - Programming Language Paradigms
 ;; Purpose: Evaluates prefix expressions and stores previous results for $n references.
+;; =========================
+;; Notes:
+;; - Supports prefix evaluation
+;; - Supports history references using $n
+;; - Uses recursive parsing strategy
+;; =========================
 
 (define interactive?
   (not (member "-b" (vector->list (current-command-line-arguments)))))
